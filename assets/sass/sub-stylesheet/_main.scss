@@ -89,6 +89,7 @@
                                 span {
                                     i {
                                         margin-right: 10px;
+                                        color: $theme-color;
                                     }
                                 }
                                 &.active {
@@ -131,6 +132,21 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+            .faq-content {
+                .faq-header {
+                    padding: 15px 0;
+                    border-bottom: 1px solid #e4c309bb;
+                    h4 {
+                        margin: 0;
+                    }
+                }
+                .faq-item {
+                    border-bottom: 1px solid #e4c309bb;
+                    .item-title {
+                        padding-top: 15px;
                     }
                 }
             }

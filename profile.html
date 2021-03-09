@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="vendor/owlcarousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="vendor/owlcarousel/css/owl.theme.default.min.css">
     <!-- Custom css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/sass/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
     <title>Loyel Online Shop</title>
@@ -475,10 +475,10 @@
 
     <!-- user profile area start  -->
     <section class="user-profile">
-        <div class="container">
+        <div class="container-fluid">
             <div class="section-wrapper">
                 <div class="row">
-                    <div class="col-lg-4 col-12">
+                    <div class="col-lg-3 col-12">
                         <div class="user-menu">
                             <div class="user-item">
                                 <div class="user-thumb">
@@ -499,27 +499,27 @@
                                 <div class="user-menulist">
                                     <ul class="list-item">
                                         <li><button type="button" class="user-btn active"><span><i class="fa fa-user"></i></span><span>My account</span></button></li>
-                                        <li><button type="button" class="user-btn"><span><i class="fa fa-user"></i></span><span>My orders</span></button></li>
-                                        <li><button type="button" class="user-btn"><span><i class="fa fa-user"></i></span><span>My Failed transitions</span></button></li>
-                                        <li><button type="button" class="user-btn"><span><i class="fa fa-user"></i></span><span>My tickets</span></button></li>
-                                        <li><button type="button" class="user-btn"><span><i class="fa fa-user"></i></span><span>Manage address</span></button></li>
-                                        <li><button type="button" class="user-btn"><span><i class="fa fa-user"></i></span><span>My bank accounts</span></button></li>
-                                        <li><button type="button" class="user-btn"><span><i class="fa fa-user"></i></span><span>Request seller accout</span></button></li>
-                                        <li><button type="button" class="user-btn"><span><i class="fa fa-user"></i></span><span>Change password</span></button></li>
-                                        <li><button type="button" class="user-btn"><span><i class="fa fa-user"></i></span><span>Sign out?</span></button></li>
+                                        <li><button type="button" class="user-btn"><span><i class="fa fa-first-order"></i></span><span>My orders</span></button></li>
+                                        <li><button type="button" class="user-btn"><span><i class="fa fa-spinner"></i></span><span>My Failed transitions</span></button></li>
+                                        <li><button type="button" class="user-btn"><span><i class="fa fa-ticket"></i></span><span>My tickets</span></button></li>
+                                        <li><button type="button" class="user-btn"><span><i class="fa fa-address-card"></i></span><span>Manage address</span></button></li>
+                                        <li><button type="button" class="user-btn"><span><i class="fa fa-dollar"></i></span><span>My bank accounts</span></button></li>
+                                        <li><button type="button" class="user-btn"><span><i class="fa fa-address-book"></i></span><span>Request seller accout</span></button></li>
+                                        <li><button type="button" class="user-btn"><span><i class="fa fa-key"></i></span><span>Change password</span></button></li>
+                                        <li><button type="button" class="user-btn"><span><i class="fa fa-sign-out"></i></span><span>Sign out?</span></button></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-8 col-12 mt-4 mt-lg-0">
+                    <div class="col-lg-9 col-12 mt-4 mt-lg-0">
                         <div class="user-details">
                             <div class="user-account">
                                 <div class="account-header">
                                     <h4 class="pb-2">My account</h4>
                                 </div>
 
-                                <form action="" class="pt-2 pb-3">
+                                <form action="" class="pt-3 pb-4">
                                     <div class="form-header">
                                         <div class="header-des">
                                             <p>Personal information</p>
@@ -530,13 +530,13 @@
                                         <div class="col-md-6 col-12">
                                             <div class="input-group">
                                                 <label for="userName">Userna: <strong class="text-danger">*</strong></label>
-                                                <input type="text" class="form-control" placeholder="User01">
+                                                <input type="text" id="userName" class="form-control" placeholder="User01">
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-12">
                                             <div class="input-group">
                                                 <label for="userMail">User Email: <strong class="text-danger">*</strong></label>
-                                                <input type="text" class="form-control" placeholder="User01@loyel.com">
+                                                <input type="text" id="userMail" class="form-control" placeholder="User01@loyel.com">
                                             </div>
                                         </div>
                                     </div>
@@ -545,7 +545,7 @@
                                     </div>
                                 </form>
 
-                                <form action="" class="pt-2 pb-3">
+                                <form action="" class="pt-3 pb-4">
                                     <div class="form-header">
                                         <div class="header-des">
                                             <p>Mobile phone</p>
@@ -556,17 +556,102 @@
                                         <div class="col-md-6 col-12">
                                             <div class="input-group">
                                                 <label for="mobileNo">Mobile No: <strong class="text-danger">*</strong></label>
-                                                <input type="text" class="form-control" placeholder="656856543">
+                                                <input type="number" id="mobileNo" class="form-control" placeholder="656856543">
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-12">
                                             <div class="input-group">
                                                 <label for="phoneNo">Phoen No: <strong class="text-danger">*</strong></label>
-                                                <input type="text" class="form-control" placeholder="380+6651+780">
+                                                <input type="number" id="phoneNo" class="form-control" placeholder="+4875431920">
                                             </div>
                                         </div>
                                     </div>
                                 </form>
+
+                                <form action="" class="pt-3 pb-4">
+                                    <div class="form-header">
+                                        <div class="header-des">
+                                            <p>Geographic location</p>
+                                            <button type="submit"><span>Edit</span></button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 col-12">
+                                            <div class="input-group">
+                                                <label for="exampleFormControlSelect1">Country: <strong class="text-danger">*</strong></label>
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                  <option>Bangladesh</option>
+                                                  <option>India</option>
+                                                  <option>Pkistan</option>
+                                                  <option>Turkey</option>
+                                                  <option>USA</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 offset-md-1 col-12">
+                                            <div class="input-group">
+                                                <label for="exampleFormControlSelect1">State: <strong class="text-danger">*</strong></label>
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                  <option>Dhaka</option>
+                                                  <option>Kelkata</option>
+                                                  <option>Lahor</option>
+                                                  <option>Istambul</option>
+                                                  <option>Cikago</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 offset-md-1 col-12">
+                                            <div class="input-group">
+                                                <label for="exampleFormControlSelect1">City: <strong class="text-danger">*</strong></label>
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                  <option>Dhaka</option>
+                                                  <option>Dillih</option>
+                                                  <option>Istamabad</option>
+                                                  <option>Ankara</option>
+                                                  <option>New yeork</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <form action="" class="pt-3 pb-4">
+                                    <div class="form-header">
+                                        <div class="header-des">
+                                            <p>User Image</p>
+                                            <button type="submit"><span>Edit</span></button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-12">
+                                            <div class="input-group">
+                                                <label for="chooseFile">Image: <strong class="text-danger">*</strong></label>
+                                                <input type="file" id="chooseFile" class="form-control" placeholder="No file chosen">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="faq-content">
+                                <div class="faq-header">
+                                    <h4>Frequent questions</h4>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="item-title">
+                                        <h6>Hello world?</h6>
+                                    </div>
+                                    <div class="item-text">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique minima iure commodi quas. Blanditiis quod assumenda consequatur exercitationem iste voluptas inventore natus expedita veniam consequuntur magnam sint ab repudiandae esse tempora, facilis ut doloribus dicta deserunt, nesciunt reiciendis? Omnis, eum.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="item-title">
+                                        <h6>Hello world?</h6>
+                                    </div>
+                                    <div class="item-text">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique minima iure commodi quas. Blanditiis quod assumenda consequatur exercitationem iste voluptas inventore natus expedita veniam consequuntur magnam sint ab repudiandae esse tempora, facilis ut doloribus dicta deserunt, nesciunt reiciendis? Omnis, eum.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

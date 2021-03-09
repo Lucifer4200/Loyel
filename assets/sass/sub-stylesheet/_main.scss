@@ -1,0 +1,140 @@
+//?====== user profile css start ======?//
+.user-profile {
+    background: #eeeeef;
+    .section-wrapper {
+        padding: 60px 0;
+        .user-menu {
+            .user-item {
+                .user-thumb {
+                    padding-bottom: 20px;
+                    text-align: center;
+                    border-radius: 5px 5px 0 0;
+                    background: #f5cfdb73;
+                    .thumb-header {
+                        span {
+                            padding: 10px 20px;
+                            width: 100%;
+                            text-align: left;
+                            color: $white-color;
+                            display: inline-block;
+                            border-radius: 5px 5px  0 0;
+                            background: $theme-color;
+                            position: relative;
+                            &::after {
+                                @extend %absolute;
+                                top: 50%;
+                                left: 10px;
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 100%;
+                                background: $white-color;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    .thumb {
+                        padding: 10px 0;
+                        img {
+                            height: 150px;
+                            width: 150px;
+                        }
+                    }
+                    .user-info {
+                        h4 {
+                            margin: 0;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .menu-header {
+                    padding: 10px 0;
+                    span {
+                        padding: 10px 20px;
+                        width: 100%;
+                        color: $white-color;
+                        display: inline-block;
+                        border-radius: 5px 5px  0 0;
+                        background: $theme-color;
+                        position: relative;
+                        &::after {
+                            @extend %absolute;
+                            top: 50%;
+                            left: 10px;
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 100%;
+                            background: $white-color;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+                .user-menulist {
+                    border-radius: 5px;
+                    background: #f5cfdb73;
+                    ul.list-item {
+                        padding: 0;
+                        margin: 0;
+                        li {
+                            list-style: none;
+                            padding-bottom: 10px;
+                            button.user-btn {
+                                padding: 10px;
+                                width: 100%;
+                                text-align: left;
+                                border-radius: 5px;
+                                background: none;
+                                &:focus {
+                                    outline: none;
+                                }
+                                span {
+                                    i {
+                                        margin-right: 10px;
+                                    }
+                                }
+                                &.active {
+                                    
+                                    background: rgba(0, 0, 0, .11);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .user-details {
+            padding: 15px;
+            border-radius: 8px;
+            background: $white-color;
+            .user-account {
+                .account-header {
+                    border-bottom: 1px solid #e4c309bb;
+                    h4 {
+                        margin: 0;
+                    }
+                }
+                form {
+                    border-bottom: 1px solid #e4c309bb;
+                    .form-header {
+                        padding-bottom: 10px;
+                        .header-des {
+                            @extend %flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            p {
+                                margin: 0;
+                                font-weight: 500;
+                            }
+                            button {
+                                background: none;
+                                span {
+                                    color: skyblue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//?====== user profile css ends  ======?//

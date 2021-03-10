@@ -1,0 +1,453 @@
+//?====== vertical sidebar css start ======?//
+.main-content {
+    @extend %flex;
+    justify-content: space-between;
+    .vertical-sidebar {
+        position: fixed;
+        left: -250px;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        background: pink;
+        z-index: 111;
+        transition: all 0.5s ease-in-out;
+        @include breakpoint (md) {
+            width: 250px;
+            left: 0;
+        }
+        &.navSlide {
+            left: 0;
+            @include breakpoint (md) {
+                left: -250px;
+            }
+        }
+        .sidebar-content {
+            padding-top: 20px;
+            .brand-logo {
+                text-align: center;
+                span {
+                    i {
+                        font-size: 25px;
+                        color: $theme-color;
+                    }
+                }
+            }
+            .seller-thumb {
+                @extend %flex;
+                align-items: center;
+                padding: 20px 0 10px 20px;
+                .img-thumb {
+                    img {
+                        height: 60px;
+                        width: 60px;
+                        border-radius: 100%;
+                    }
+                }
+                .text-thumb {
+                    padding-left: 15px;
+                    p {
+                        margin: 0;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                    span {
+                        font-size: 12px;
+                        color: #000;
+                        position: relative;
+                        padding-left: 10px;
+                        &::before {
+                            @extend %absolute;
+                            top: 50%;
+                            left: 0;
+                            height: 5px;
+                            width: 5px;
+                            transform: translateY(-50%);
+                            border-radius: 100%;
+                            background: green;
+                        }
+                    }
+                }
+            }
+            .sidebar-menu {
+                .menu-title {
+                    padding: 12px;
+                    background: #69474785;
+                    p {
+                        margin: 0;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                    }
+                }
+                ul.menu-list {
+                    margin: 0;
+                    list-style: none;
+                    li {
+                        position: relative;
+                        a {
+                            display: block;
+                            text-decoration: none;
+                            padding: 10px 10px 10px 15px;
+                            span {
+                                color: #000;
+                                i {
+                                    margin-right: 10px;
+                                    color: $theme-color;
+                                }
+                            }
+                            &.active {
+                                background: #69474785;
+                                &::before {
+                                    @extend %absolute;
+                                    top: 0;
+                                    left: 0;
+                                    height: 100%;
+                                    width: 5px;
+                                    background: green;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .content-right {
+        width: 100%;
+        margin-left: 0; 
+        overflow-x: hidden;
+        transition: all 0.5s ease-in-out;
+        @include breakpoint (md) {
+            margin-left: 250px;
+        }
+        &.changeWidth {
+            @include breakpoint (md) {
+                margin-left: 0;
+            }
+        }
+
+        //*====== top navbar start =====*//
+        .top-navbar {  
+            position: relative;  
+            .nav-item {
+                @extend %flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 18px 15px;
+                background: $white-color;
+                .nav-toggle {
+                    i {
+                        color: $theme-color;
+                        font-size: 30px;
+                    }
+                    &.change {
+                        i {
+                            &::after {
+                                content: "\f0c9";
+                            }
+                            &::before {
+                                content: none;
+                            }
+                        }
+                    }
+                }
+                .menu-item {
+                    ul.item-list {
+                        margin: 0;
+                        list-style: none;
+                        @extend %flex;
+                        align-items: center;
+                        &.top-list {
+                            transform: translateY(0);
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        @include breakpoint (max-sm) {
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            width: 100%;
+                            height: 210px;
+                            display: block;
+                            padding: 10px;
+                            opacity: 0;
+                            transform: translateY(35px);
+                            background: $theme-color;
+                            z-index: 9;
+                            transition: all 0.3s ease-in-out;
+                        }
+                        li {
+                            margin-right: 10px;
+                            @include breakpoint (max-sm) {
+                                padding-bottom: 10px;
+                            }
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                            span {
+                                i {
+                                    margin-left: 10px;
+                                    color: $theme-color;
+                                    @include breakpoint (max-sm) {
+                                        color: $white-color;
+                                    }
+                                }
+                                @include breakpoint (max-sm) {
+                                    color: $white-color;
+                                }
+                            }
+                            select {
+                                padding: 3px;
+                                border-radius: 3px;
+                                border: 1px solid #333;
+                            }
+                            a {
+                                color: #000;
+                                @include breakpoint (max-sm) {
+                                    color: $white-color;
+                                }
+                            }
+                        }
+                    }
+                    .top-toggle {
+                        i {
+                            color: $theme-color;
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        //*====== top navbar ends  =====*//
+
+
+        //*====== dashbord css start =======*//
+        .dashboard-area {
+            margin: 15px;
+            border-radius: 5px;
+            background: $white-color;
+            border-top: 2.5px solid $theme-color;
+            .dashboard-title {
+                padding: 10px;
+                border-bottom: 1px solid #dab33ead;
+                h3 {    
+                    margin: 0;
+                    font-weight: 500;
+                    i {
+                        font-weight: 400;
+                    }
+                }
+            }
+            .section-wrapper {
+                padding: 30px 10px;
+                .loyel-card {
+                    .col-lg-3.col-md-6.col-12:nth-child(1) {
+                        .card-item {
+                            background: linear-gradient(90deg, #b18917, #dab051);
+                        }
+                    }
+                    .col-lg-3.col-md-6.col-12:nth-child(2) {
+                        .card-item {
+                            background: linear-gradient(90deg, #28a745, #59ca72);
+                        }
+                    }
+                    .col-lg-3.col-md-6.col-12:nth-child(3) {
+                        .card-item {
+                            background: linear-gradient(90deg, #8417b1, #bb5ce2);
+                        }
+                    }
+                    .col-lg-3.col-md-6.col-12:nth-child(4) {
+                        .card-item {
+                            background: linear-gradient(90deg, #007bff, #0062cc);
+                        }
+                    }
+                    .col-lg-3.col-md-6.col-12:nth-child(5) {
+                        .card-item {
+                            background: linear-gradient(90deg, #17a2b8, #17a2b8);
+                        }
+                    }
+                    .col-lg-3.col-md-6.col-12:nth-child(6) {
+                        .card-item {
+                            background: linear-gradient(90deg, #1f6684, #adb5bd);
+                        }
+                    }
+                    .card-item {
+                        border-radius: 5px;
+                        box-shadow: -6px 0px 35px rgba(0, 0, 0, .25);
+                        .card-body {
+                            @include breakpoint (lg) {
+                                padding: 2.25rem;
+                            }
+                            h3 {
+                                margin: 0;
+                                color: $white-color;
+                            }
+                            p {
+                                margin: 0;
+                                color: $white-color;
+                            }
+                        }
+                        .card-footer {
+                            text-align: center;
+                            background-color: rgba(0,0,0,.10);
+                            a {
+                                text-decoration: none;
+                                span {
+                                    color: $white-color;
+                                    i {
+                                        margin-left: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .yearly-order {
+                    padding: 30px 0 60px;
+                    .content-title {
+                        text-align: center;
+                        h3 {
+                            margin: 0;
+                            font-weight: 500;
+                            letter-spacing: 1.5px;
+                        }
+                    }
+                    .yearly-chart {
+                        padding-top: 80px;
+                        @extend %flex;
+                        position: relative;
+                        justify-content: center;
+                        .sales-crount {
+                            span {
+                                position: absolute;
+                                left: 0;
+                                bottom: -10px;
+                                transform: rotate(-90deg);    
+                            }
+                        }
+                        ul.chart-list {
+                            @extend %flex;
+                            justify-content: space-between;
+                            height: 3px;
+                            width: 80%;
+                            margin: 0;
+                            background: $theme-color;
+                            li {
+                                list-style: none;
+                                height: 10px;
+                                width: 10px;
+                                margin-top: -3px;
+                                border-radius: 100%;
+                                background: $theme-color;
+                                display: flex;
+                                position: relative;
+                                cursor: pointer;
+                                justify-content: space-between;
+                                &.active {
+                                    position: relative;
+                                    &::after {
+                                        @extend %absolute;
+                                        top: -5px;
+                                        left: -5px;
+                                        bottom: -5px;
+                                        right: -5px;
+                                        border: 1px solid $theme-color;
+                                        border-radius: 100%;
+                                    }
+                                    &::before {
+                                        @extend %absolute;
+                                        top: -200%;
+                                        left: -200%;
+                                        border-radius: 50%;
+                                        border: 25px solid rgba(232, 5, 5, 0.802);
+                                        box-shadow: 0 0px 0px 10px rgba(255, 255, 255, .15);
+                                        animation: 2s ease 1s normal none infinite running videobutton;
+                                    }
+                                    span {
+                                        top: -50px;
+                                        transform: scaleY(1);
+                                    }
+                                }
+                                span {
+                                    position: absolute;
+                                    top: -25px;
+                                    left: -25px;
+                                    font-size: 12px;
+                                    color: $white-color;
+                                    padding: 5px 10px;
+                                    border-radius: 5px;
+                                    transform: scaleY(0);
+                                    transform-origin: bottom;
+                                    background: $theme-color;
+                                    transition: all 0.3s ease-in-out;
+                                    &::after {
+                                        @extend %absolute;
+                                        bottom: -7px;
+                                        left: 50%;
+                                        height: 14px;
+                                        width: 14px;
+                                        background: $theme-color;
+                                        transform: translateX(-50%)rotate(45deg);
+                                    }
+                                }
+                                &:hover {
+                                    span {
+                                        top: -50px;
+                                        transform: scaleY(1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .order-table {
+                    padding: 60px 0 30px;
+                    .table-header {
+                        display: flex;
+                        padding-bottom: 10px;
+                        align-items: center;
+                        justify-content: space-between;             
+                        h3 {
+                            font-weight: 500;
+                            margin: 0;
+                        }
+                        span {
+                            i {
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //*====== dashbord css ends  =======*//
+
+        
+        //*====== footer area start =======*//
+        footer {
+            padding: 20px 15px;
+            background: $white-color;
+            .footer-content {
+                @extend %flex;
+                align-items: center;
+                justify-content: space-between;
+                p {
+                    margin: 0;
+                }
+            }
+        }
+        //*====== footer area ends  =======*//
+
+    }
+}
+//?====== vertical sidebar css ends  ======?//
+
+
+
+@keyframes videobutton {
+    0% {
+      transform: scale(0);
+      opacity: 1; }
+    100% {
+      transform: scale(1);
+      opacity: 0; } }

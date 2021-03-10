@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo/favicon.png">
+    <!-- Bootstap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl Carousel css -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="assets/sass/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <style>
+        body {
+            background: #847d7d61;
+        }
+    </style>
+
+    <title>Loyel Online Shop</title>
+</head>
+<body>
+    
+
+    <div class="main-content">
+
+    <!-- vertica sidebar start -->
+    <div class="vertical-sidebar" id="slideNav">
+        <div class="sidebar-content">
+            <div class="brand-logo">
+                <img src="assets/images/logo/logo-final.png" alt="">
+                <span class="close-icon d-md-none float-right mr-2" onclick="menuAnimation(this)">
+                    <i class="fa fa-times"></i>
+                </span>
+            </div>
+            <div class="seller-thumb">
+                <div class="img-thumb">
+                    <img src="assets/images/profile/user.png" alt="">
+                </div>
+                <div class="text-thumb">
+                    <p>Seller02</p>
+                    <span class="online-status">Online</span>
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <div class="menu-title">
+                    <p>Main Navigation</p>
+                </div>
+                <ul class="menu-list">
+                    <li><a href="#0"><span><i class="fa fa-dashcube"></i></span><span>Dashboard</span></a></li>
+                    <li><a href="#0"><span><i class="fa fa-user-circle"></i></span><span>Profile</span></a></li>
+                    <li><a href="#0"><span><i class="fa fa-address-card"></i></span><span>Your Store</span></a></li>
+                    <li id="accordionExample">
+                        <a href="#0" class="active" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span>
+                                <i class="fa fa-shopping-basket"></i>
+                            </span>
+                            <span>Product Management</span>
+                        </a>
+                        <!-- <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <ul class="sub-menu">
+                                <li><a href="#"><span><i class="fa fa-circle"></i></span><span>Brands</span></a></li>
+                                <li><a href="#"><span><i class="fa fa-circle"></i></span><span>Product</span></a></li>
+                                <li><a href="#"><span><i class="fa fa-circle"></i></span><span>Categories</span></a></li>
+                            </ul>
+                        </div> -->
+                    </li>
+                    <li><a href="#0"><span><i class="fa fa-shopping-cart"></i></span><span>Order Management</span></a></li>
+                    <li><a href="#0"><span><i class="fa fa-file"></i></span><span>Invoice Setting</span></a></li>
+                    <li><a href="#0"><span><i class="fa fa-sitemap"></i></span><span>Shopping Information</span></a></li>
+                    <li><a href="#0"><span><i class="fa fa-tasks"></i></span><span>Account Management</span></a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <!-- vertica sidebar ends  -->
+
+
+    <!-- content-right start -->
+    <div class="content-right" id="contentWidth">
+
+        <!-- top navbar start -->
+        <div class="top-navbar">
+            <div class="container-fluid p-0">
+                <div class="nav-item">
+                    <div class="nav-toggle" onclick="menuAnimation(this)">
+                        <i class="fa fa-times"></i>
+                    </div>
+                    <div class="menu-item">
+                        <ul class="item-list" id="topList">
+                            <li><a href="#0"><span>Visit site</span><span><i class="fa fa-edit"></i></span></a></li>
+                            <li class="dropdown">
+                                <div class="input-group">
+                                    <select class="form-select" id="inputGroupSelect01">
+                                      <option selected="">Spanish</option>
+                                      <option value="1">Bengali</option>
+                                      <option value="2">English</option>
+                                      <option value="3">Turkey</option>
+                                </select>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#0">
+                                    <span><img src="assets/images/profile/user.png" height="35" width="35" alt=""></span>
+                                    <span class="ml-1">Hi! seller02</span>
+                                </a>
+                            </li>
+                            <li><span><i class="fa fa-bell"></i></span></li>
+                            <li><a href="#0">Logout</a></li>
+                        </ul>
+                        <div class="top-toggle d-block d-sm-none" onclick="topNav(this)">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top navbar ends  -->
+
+        <!-- dashboard area start -->
+        <div class="dashboard-area">
+            <div class="container-fluid p-0">
+                <div class="dashboard-title">
+                    <h3><i class="fa fa-dashcube mr-2"></i>Dashboard</h3>
+                </div>
+                <div class="section-wrapper">
+
+                    <div class="loyel-card">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="card-item">
+                                    <div class="card-body">
+                                        <h3>01</h3>
+                                        <p>Total Prodct</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#0"><span>More info</span><span><i class="fa fa-arrow-circle-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="card-item">
+                                    <div class="card-body">
+                                        <h3>02</h3>
+                                        <p>Total Orders</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#0"><span>More info</span><span><i class="fa fa-arrow-circle-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="card-item">
+                                    <div class="card-body">
+                                        <h3>03</h3>
+                                        <p>Total Orders</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#0"><span>More info</span><span><i class="fa fa-arrow-circle-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="card-item">
+                                    <div class="card-body">
+                                        <h3>04</h3>
+                                        <p>Total Order</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#0"><span>More info</span><span><i class="fa fa-arrow-circle-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="card-item">
+                                    <div class="card-body">
+                                        <h3>05</h3>
+                                        <p>Receive Payout</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#0"><span>More info</span><span><i class="fa fa-arrow-circle-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="card-item">
+                                    <div class="card-body">
+                                        <h3>06</h3>
+                                        <p>Total Earnigs</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#0"><span>More info</span><span><i class="fa fa-arrow-circle-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="yearly-order">
+                        <div class="content-title">
+                            <h3>Total Orders in 2021</h3>
+                        </div>
+                        <div class="yearly-chart">
+                            <div class="sales-crount">
+                                <span>sales</span>
+                            </div>
+                            <ul class="chart-list">
+                                <li class="active"><span>January</span></li>
+                                <li><span>February</span></li>
+                                <li><span>March</span></li>
+                                <li><span>Aprill</span></li>
+                                <li><span>May</span></li>
+                                <li><span>June</span></li>
+                                <li><span>July</span></li>
+                                <li><span>August</span></li>
+                                <li><span>September</span></li>
+                                <li><span>Octobor</span></li>
+                                <li><span>November</span></li>
+                                <li><span>December</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="order-table">
+                        <div class="table-header">
+                            <h3><i class="fa fa-star mr-2"></i>Latest Orders</h3>
+                            <span><i class="fa fa-minus"></i></span>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Order Id</th>
+                                        <th scope="col">Customer name</th>
+                                        <th scope="col">Qty</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                        <td>@fat</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                        <td>@twitter</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <table class="table table-bordered">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Order Id</th>
+                                        <th scope="col">Customer name</th>
+                                        <th scope="col">Qty</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                        <td>@fat</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                        <td>@twitter</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- dashboard area ends  -->
+
+        <!-- footer area start -->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2021 | Loyel | All right reserved</p>
+                <p>V 1.8</p>
+            </div>
+        </footer>
+        <!-- footer area ends  -->
+        
+
+    </div>
+    <!-- content-right start -->
+
+    </div>
+
+
+    <!-- optional js -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // mobile menu responsive
+        function menuAnimation(x) {
+            x.classList.toggle("change");
+            var element = document.getElementById("slideNav");
+            element.classList.toggle("navSlide");
+            var contentFade = document.getElementById("contentWidth");
+            contentFade.classList.toggle("changeWidth");
+        }
+
+        // change content width
+        function topNav(x) {
+            x.classList.toggle("change");
+            var element = document.getElementById("topList");
+            element.classList.toggle("top-list");
+        }
+    </script>
+
+</body>
+</html>

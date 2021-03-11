@@ -772,6 +772,7 @@ form button.custom-btn {
 .main-content .content-right .top-navbar .nav-item .nav-toggle i {
   color: #ae4b03;
   font-size: 30px;
+  cursor: pointer;
 }
 
 .main-content .content-right .top-navbar .nav-item .nav-toggle.change i::after {
@@ -866,6 +867,7 @@ form button.custom-btn {
 .main-content .content-right .top-navbar .nav-item .menu-item .top-toggle i {
   color: #ae4b03;
   font-size: 30px;
+  cursor: pointer;
 }
 
 .main-content .content-right .dashboard-area {

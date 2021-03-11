@@ -246,37 +246,70 @@
                     .col-lg-3.col-md-6.col-12:nth-child(1) {
                         .card-item {
                             background: linear-gradient(90deg, #b18917, #dab051);
+                            &::after {
+                                content: "\f291";
+                            }
                         }
                     }
                     .col-lg-3.col-md-6.col-12:nth-child(2) {
                         .card-item {
                             background: linear-gradient(90deg, #28a745, #59ca72);
+                            &::after {
+                                content: "\f1fe";
+                            }
                         }
                     }
                     .col-lg-3.col-md-6.col-12:nth-child(3) {
                         .card-item {
                             background: linear-gradient(90deg, #8417b1, #bb5ce2);
+                            &::after {
+                                content: "\f07a";
+                            }
                         }
                     }
                     .col-lg-3.col-md-6.col-12:nth-child(4) {
                         .card-item {
                             background: linear-gradient(90deg, #007bff, #0062cc);
+                            &::after {
+                                content: "\f07a";
+                            }
                         }
                     }
                     .col-lg-3.col-md-6.col-12:nth-child(5) {
                         .card-item {
                             background: linear-gradient(90deg, #17a2b8, #17a2b8);
+                            &::after {
+                                content: "\f0d6";
+                            }
                         }
                     }
                     .col-lg-3.col-md-6.col-12:nth-child(6) {
                         .card-item {
                             background: linear-gradient(90deg, #1f6684, #adb5bd);
+                            &::after {
+                                content: "\f155";
+                            }
                         }
                     }
                     .card-item {
                         border-radius: 5px;
+                        position: relative;
                         box-shadow: -6px 0px 35px rgba(0, 0, 0, .25);
+                        &::after {
+                            position: absolute;   
+                            right: 10%;
+                            top: 50%;
+                            font: normal normal normal 14px/1 FontAwesome;
+                            transform: translateY(-50%);
+                            font-size: 60px;
+                            opacity: .5;
+                            @include breakpoint (lg) {
+                                font-size: 80px;
+                            }
+                        }
                         .card-body {
+                            position: relative;
+                            z-index: 1;
                             @include breakpoint (lg) {
                                 padding: 2.25rem;
                             }

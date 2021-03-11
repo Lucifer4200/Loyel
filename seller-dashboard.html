@@ -54,17 +54,17 @@
                     <p>Main Navigation</p>
                 </div>
                 <ul class="menu-list">
-                    <li><a href="#0"><span><i class="fa fa-dashcube"></i></span><span>Dashboard</span></a></li>
+                    <li><a href="#0" class="active"><span><i class="fa fa-dashcube"></i></span><span>Dashboard</span></a></li>
                     <li><a href="#0"><span><i class="fa fa-user-circle"></i></span><span>Profile</span></a></li>
                     <li><a href="#0"><span><i class="fa fa-address-card"></i></span><span>Your Store</span></a></li>
-                    <li id="accordionExample">
-                        <a href="#0" class="active" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <li class="accordion" id="accordionExample">
+                        <a href="#0" class="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                             <span>
                                 <i class="fa fa-shopping-basket"></i>
                             </span>
                             <span>Product Management</span>
                         </a>
-                        <!-- <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <!-- <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <ul class="sub-menu">
                                 <li><a href="#"><span><i class="fa fa-circle"></i></span><span>Brands</span></a></li>
                                 <li><a href="#"><span><i class="fa fa-circle"></i></span><span>Product</span></a></li>
@@ -358,6 +358,7 @@
             var element = document.getElementById("topList");
             element.classList.toggle("top-list");
         }
+
     </script>
 
 </body>

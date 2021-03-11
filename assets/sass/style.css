@@ -900,9 +900,17 @@ form button.custom-btn {
   background: linear-gradient(90deg, #b18917, #dab051);
 }
 
+.main-content .content-right .dashboard-area .section-wrapper .loyel-card .col-lg-3.col-md-6.col-12:nth-child(1) .card-item::after {
+  content: "\f291";
+}
+
 .main-content .content-right .dashboard-area .section-wrapper .loyel-card .col-lg-3.col-md-6.col-12:nth-child(2) .card-item {
   background: -webkit-gradient(linear, left top, right top, from(#28a745), to(#59ca72));
   background: linear-gradient(90deg, #28a745, #59ca72);
+}
+
+.main-content .content-right .dashboard-area .section-wrapper .loyel-card .col-lg-3.col-md-6.col-12:nth-child(2) .card-item::after {
+  content: "\f1fe";
 }
 
 .main-content .content-right .dashboard-area .section-wrapper .loyel-card .col-lg-3.col-md-6.col-12:nth-child(3) .card-item {
@@ -910,9 +918,17 @@ form button.custom-btn {
   background: linear-gradient(90deg, #8417b1, #bb5ce2);
 }
 
+.main-content .content-right .dashboard-area .section-wrapper .loyel-card .col-lg-3.col-md-6.col-12:nth-child(3) .card-item::after {
+  content: "\f07a";
+}
+
 .main-content .content-right .dashboard-area .section-wrapper .loyel-card .col-lg-3.col-md-6.col-12:nth-child(4) .card-item {
   background: -webkit-gradient(linear, left top, right top, from(#007bff), to(#0062cc));
   background: linear-gradient(90deg, #007bff, #0062cc);
+}
+
+.main-content .content-right .dashboard-area .section-wrapper .loyel-card .col-lg-3.col-md-6.col-12:nth-child(4) .card-item::after {
+  content: "\f07a";
 }
 
 .main-content .content-right .dashboard-area .section-wrapper .loyel-card .col-lg-3.col-md-6.col-12:nth-child(5) .card-item {
@@ -920,15 +936,46 @@ form button.custom-btn {
   background: linear-gradient(90deg, #17a2b8, #17a2b8);
 }
 
+.main-content .content-right .dashboard-area .section-wrapper .loyel-card .col-lg-3.col-md-6.col-12:nth-child(5) .card-item::after {
+  content: "\f0d6";
+}
+
 .main-content .content-right .dashboard-area .section-wrapper .loyel-card .col-lg-3.col-md-6.col-12:nth-child(6) .card-item {
   background: -webkit-gradient(linear, left top, right top, from(#1f6684), to(#adb5bd));
   background: linear-gradient(90deg, #1f6684, #adb5bd);
 }
 
+.main-content .content-right .dashboard-area .section-wrapper .loyel-card .col-lg-3.col-md-6.col-12:nth-child(6) .card-item::after {
+  content: "\f155";
+}
+
 .main-content .content-right .dashboard-area .section-wrapper .loyel-card .card-item {
   border-radius: 5px;
+  position: relative;
   -webkit-box-shadow: -6px 0px 35px rgba(0, 0, 0, 0.25);
           box-shadow: -6px 0px 35px rgba(0, 0, 0, 0.25);
+}
+
+.main-content .content-right .dashboard-area .section-wrapper .loyel-card .card-item::after {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  font: normal normal normal 14px/1 FontAwesome;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 60px;
+  opacity: .5;
+}
+
+@media (min-width: 992px) {
+  .main-content .content-right .dashboard-area .section-wrapper .loyel-card .card-item::after {
+    font-size: 80px;
+  }
+}
+
+.main-content .content-right .dashboard-area .section-wrapper .loyel-card .card-item .card-body {
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 992px) {
